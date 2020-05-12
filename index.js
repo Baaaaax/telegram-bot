@@ -1,8 +1,16 @@
+const express = require("express");
+const app = express();
+var cors = require("cors");
+const port = process.env.PORT || 3000;
+
+app.use(cors());
+
 require("dotenv").config();
 process.env.NTBA_FIX_319 = 1;
 process.env["NTBA_FIX_350"] = 1;
 const { getMessageFromString } = require("./utilities");
 const fs = require("fs");
+
 const blandoAudio = "./media/audio/blandoAudio.ogg";
 const dislessiaAudio = "./media/audio/dislessiaAudio.ogg";
 const ketama1 = "./media/img/ketama1.png";
@@ -167,3 +175,5 @@ bot.on("message", (msg) => {
 });
 
 bot.on("polling_error", (err) => console.log(err));
+
+app.listen(port, () => console.log(`listening on port ${port}!`));
