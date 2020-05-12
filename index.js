@@ -40,6 +40,12 @@ bot.on("message", (msg) => {
       case "rehab":
         bot.sendMessage(chatId, "SESSO DROGA AMORE!");
         break;
+      case "rlaru":
+        bot.sendMessage(
+          chatId,
+          "IL GRANDE, MITICO, INIMITABILE RLARUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU!"
+        );
+        break;
       case "ketama":
         const ketamaArrayImg = [ketama1, ketama2, ketama3];
 
