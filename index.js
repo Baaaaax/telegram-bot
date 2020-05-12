@@ -4,6 +4,7 @@ process.env["NTBA_FIX_350"] = 1;
 const { getMessageFromString } = require("./utilities");
 const fs = require("fs");
 const blandoAudio = "./media/audio/blandoAudio.ogg";
+const dislessiaAudio = "./media/audio/dislessiaAudio.ogg";
 const ketama1 = "./media/img/ketama1.png";
 const ketama2 = "./media/img/ketama2.png";
 const ketama3 = "./media/img/ketama3.png";
@@ -39,6 +40,48 @@ bot.on("message", (msg) => {
         break;
       case "rehab":
         bot.sendMessage(chatId, "SESSO DROGA AMORE!");
+        break;
+      case "palla":
+        bot.sendMessage(chatId, "INSTA SHOP");
+        break;
+      case "issue":
+        bot.sendMessage(chatId, "Li risolvo tutti zi!");
+        break;
+      case "caffettino":
+      case "caffe":
+      case "caffè":
+        bot.sendMessage(chatId, "Uè figa caffettinoo ?");
+        break;
+
+      case "baxs":
+      case "baks":
+      case "bax":
+      case "bex":
+      case "bacs":
+      case "becs":
+        bot.sendMessage(chatId, "AO");
+        break;
+      case "rudy":
+        bot.sendMessage(chatId, "AMORE PATATO");
+        break;
+      case "fortnite":
+        bot.sendMessage(chatId, "Scala muro scala muro");
+        break;
+      case "overwatch":
+        bot.sendMessage(chatId, "BEST GIOCO EVAH!");
+        break;
+      case "genji":
+        bot.sendMessage(chatId, "DASH ZACCAGNATA DASH ZACCAGNATA!");
+        break;
+      case "dislessia":
+      case "dislessico":
+        const dislessiaFileOptions = {
+          // Explicitly specify the file name.
+          filename: "dislessiaAudio",
+          // Explicitly specify the MIME type.
+          contentType: "audio/ogg",
+        };
+        bot.sendAudio(chatId, dislessiaAudio, {}, dislessiaFileOptions);
         break;
       case "rlaru":
         bot.sendMessage(
@@ -83,6 +126,37 @@ bot.on("message", (msg) => {
         break;
       case "fabi":
         bot.sendMessage(chatId, "Si dice FABAYOLO!");
+        break;
+      case "grande":
+      case "grosso":
+        bot.sendMessage(chatId, "Sei na branda !");
+        break;
+      case "bro":
+        bot.sendMessage(chatId, "Bella secco che dici ?!");
+        break;
+      case "quercia":
+        bot.sendMessage(
+          chatId,
+          "Bravo , pianta le radici pe terra mortacci tua!"
+        );
+        break;
+      case "xd":
+        bot.sendMessage(chatId, "XDXDXDXDXDXDXDXDXDXDXD");
+        break;
+      case "lavoro":
+      case "lavorare":
+      case "milano":
+      case "english":
+        bot.sendMessage(
+          chatId,
+          "Dopo un lunga call e dopo aver fatto il briefing della giornata, posso dire che RLARU ha risolto tutte le ISSUE :)"
+        );
+        break;
+      case "power":
+        bot.sendMessage(
+          chatId,
+          "666 DPG ESHGHERE BRO, ORA CI DEVI DIRE PERCHé TUA MADRE è MORTA MORTACCI TUA"
+        );
         break;
       default:
         break;
