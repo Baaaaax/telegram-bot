@@ -1,4 +1,6 @@
 require("dotenv").config();
+process.env.NTBA_FIX_319 = 1;
+process.env["NTBA_FIX_350"] = 1;
 const { getMessageFromString } = require("./utilities");
 const fs = require("fs");
 const blandoAudio = "./media/audio/blandoAudio.ogg";
@@ -7,7 +9,7 @@ const ketama2 = "./media/img/ketama2.png";
 const ketama3 = "./media/img/ketama3.png";
 
 const TelegramBot = require("node-telegram-bot-api");
-const token = process.env.NTBA_FIX_319;
+const token = process.env.TOKEN;
 
 const bot = new TelegramBot(token, { polling: true });
 
