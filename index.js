@@ -22,7 +22,7 @@ const linusImg3 = "./media/img/linusImg3.jpg";
 const linusImg4 = "./media/img/linusImg4.jpg";
 const baxImg = "./media/img/baxImg.jpg";
 const tiltImg = "./media/img/tiltImg1.jpg";
-const lunaImg1 = "./media/img/lunaImg1.jpg";
+const lunaImg1 = "./media/img/lunaImg1.JPG";
 
 const TelegramBot = require("node-telegram-bot-api");
 const token = process.env.TOKEN;
