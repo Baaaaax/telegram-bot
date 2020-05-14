@@ -23,6 +23,9 @@ const linusImg4 = "./media/img/linusImg4.jpg";
 const baxImg = "./media/img/baxImg.jpg";
 const tiltImg = "./media/img/tiltImg1.jpg";
 const lunaImg1 = "./media/img/lunaImg1.JPG";
+const bandoAudio = "./media/audio/bandoAudio.ogg";
+const bellaBroAudio = "./media/audio/bellaBroAudio.ogg";
+const rehabAudio = "./media/audio/rehabAudio.ogg";
 
 const TelegramBot = require("node-telegram-bot-api");
 const token = process.env.TOKEN;
@@ -55,7 +58,11 @@ bot.on("message", (msg) => {
           bot.sendMessage(chatId, "UE UAJò FARMIAM U PLAGIAMENT");
           break;
         case "rehab":
-          bot.sendMessage(chatId, "SESSO DROGA AMORE!");
+          const rehabFileOptions = {
+            filename: "rehabAudio",
+            contentType: "audio/ogg",
+          };
+          bot.sendAudio(chatId, rehabAudio, {}, rehabFileOptions);
           break;
         case "palla":
           bot.sendMessage(chatId, "INSTA SHOP");
@@ -92,9 +99,7 @@ bot.on("message", (msg) => {
         case "dislessia":
         case "dislessico":
           const dislessiaFileOptions = {
-            // Explicitly specify the file name.
             filename: "dislessiaAudio",
-            // Explicitly specify the MIME type.
             contentType: "audio/ogg",
           };
           bot.sendAudio(chatId, dislessiaAudio, {}, dislessiaFileOptions);
@@ -112,9 +117,7 @@ bot.on("message", (msg) => {
             ketamaArrayImg[Math.floor(Math.random() * ketamaArrayImg.length)];
 
           const ketamaFileOptions = {
-            // Explicitly specify the file name.
             filename: "ketama",
-            // Explicitly specify the MIME type.
             contentType: "image/png",
           };
           bot.sendPhoto(chatId, ketImg, {}, ketamaFileOptions);
@@ -123,7 +126,11 @@ bot.on("message", (msg) => {
           bot.sendMessage(chatId, "HIHIHI LOVEGANG");
           break;
         case "38":
-          bot.sendMessage(chatId, "Già t'accollavi nbotto!");
+          const bellaBroFileOptions = {
+            filename: "bellaBro",
+            contentType: "audio/ogg",
+          };
+          bot.sendAudio(chatId, bellaBroAudio, {}, bellaBroFileOptions);
           break;
         case "vero":
           bot.sendMessage(chatId, "Qualcuno ha detto RLARU ?!?");
@@ -218,6 +225,17 @@ bot.on("message", (msg) => {
           };
           bot.sendPhoto(chatId, lunaImg1, {}, lunaFileOptions);
           break;
+        case "bando":
+        case "bendo":
+          const bandoFileOptions = {
+            // Explicitly specify the file name.
+            filename: "bando",
+            // Explicitly specify the MIME type.
+            contentType: "audio/ogg",
+          };
+          bot.sendAudio(chatId, bandoAudio, {}, bandoFileOptions);
+          break;
+
         default:
           break;
       }
